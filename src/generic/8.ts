@@ -19,6 +19,13 @@ type Form = {
 };
 
 // Реалізуйте Params так, щоб унеможливити поле 'errors' з типу Form
-type Params = Form;
+type Params = Omit<Form, 'errors'>;
+
+const params: Params = {
+  email: 'example@mail.com',
+  firstName: 'John',
+  lastName: 'Doe',
+  phone: '1234567890',
+};
 
 export {};
